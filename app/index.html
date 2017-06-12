@@ -7,7 +7,7 @@
   <title>Widget</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
   <link rel="stylesheet" href="{{rootURL}}assets/widget.css"> {{content-for "head-footer"}}
 </head>
@@ -20,16 +20,16 @@
   <script>
     <script>
       $(document).ready(function () {
-        $.get("https://dashboard-staging.hrofficelabs.com/", function (data, status) {
-          alert("Data: " + data + "\nStatus: " + status);
-        });
-        // $.post("https://dashboard-staging.hrofficelabs.com/",
-        //   {
-        //     token : ""
-        //   },
-        //   function (data, status) {
-        //     alert("Data: " + data + "\nStatus: " + status);
-        //   });
+        // $.get("https://dashboard-staging.hrofficelabs.com/", function (data, status) {
+        //   alert("Data: " + data + "\nStatus: " + status);
+        // });
+        $.post("https://dashboard-staging.hrofficelabs.com/",
+          {
+            token : ""
+          },
+          function (data, status) {
+            alert("Data: " + data + "\nStatus: " + status);
+          });
       });
   </script>
 
