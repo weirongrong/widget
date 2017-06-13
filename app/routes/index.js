@@ -6,11 +6,7 @@ export default Ember.Route.extend({
  model(){
     
     let headers = this.get('https://dashboard-staging.hrofficelabs.com/');
-    let xRequestHeader = headers.get('X-Request');
-    //  return Ember.$.ajax('https://dashboard-staging.hrofficelabs.com');
-    //  return fetch('https://dashboard-staging.hrofficelabs.com')
-    //     .then (function(response){
-    //         return response;
-    //     });
+    let xRequestHeader = headers.get('token');
+    console.log(xRequestHeader);
  }
 });
